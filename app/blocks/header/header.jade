@@ -1,0 +1,12 @@
+mixin header()
+	+b.HEADER.header&attributes(attributes)
+
+		+b.logo
+			+e.A.link(href='http:/www.csssr.io' target='_blank' title='CSSSR Сайт')
+				+e.IMG.image(src='./assets/images/logo.png' alt='CSSSR')
+
+		+b.title
+			+e.IMG.image(src='./assets/images/title.png' alt='Дело')
+
+		+b.stamp
+			+e.IMG.image(src='./assets/images/stamp.png' alt='Секретно. Заполнено собственноручно.')

@@ -1,6 +1,14 @@
-extends /blocks/layout-default/layout-default
+extends /blocks/layout/layout
+
+include /blocks/page/page
+
+include /blocks/header/header
+include /blocks/main/main
 
 block head
-	- var pageTitle = 'CSSSR Project Template';
+	- var pageTitle = 'Kirill Yakushev - CSSSR';
 
 block content
+	+page
+		+header
+		+main
