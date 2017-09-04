@@ -8,8 +8,10 @@ include /blocks/main/section/section
 include /blocks/main/title/title
 include /blocks/main/description/description
 include /blocks/main/content/content
+include /blocks/skills/skills
 
 include /blocks/input-group/input-group
+include /blocks/checkbox-group/checkbox-group
 
 block head
 	- var pageTitle = 'Kirill Yakushev - CSSSR';
@@ -32,4 +34,49 @@ block content
 						| Расскажите о себе чекбоксами
 					+description
 						| Отметьте чекбоксами пункты, которые соответствуют вашим скиллам. Кстати, отсутствие опыта не означает, что у вас меньше шансов стать одним из наших товарищей. Это означает, что вы будете получать те задачи, с которыми гарантировано будете справляться.
-					+content
+					+content._skills
+						+skills
+							+e.SPAN.skill
+								+checkbox-group('БЭМ/OOCSS', true)
+							+e.SPAN.skill
+								+checkbox-group('Pug (Jade)', true)
+							+e.SPAN.skill
+								+checkbox-group('Stylys/LESS/SASS', true)
+							+e.SPAN.skill
+								+checkbox-group('Работаю с SVG', false)
+							+e.SPAN.skill
+								+checkbox-group('Верстаю семантично', false)
+							+e.SPAN.skill
+								+checkbox-group('Accessibility (A11Y)', false)
+							+e.SPAN.skill
+								+checkbox-group('ES2015/ES2016', true)
+						+skills
+							+e.SPAN.skill
+								+checkbox-group('Gulp/GRUNT', true)
+							+e.SPAN.skill
+								+checkbox-group('Webpack', true)
+							+e.SPAN.skill
+								+checkbox-group('Дружу с WebGL', false)
+							+e.SPAN.skill
+								+checkbox-group('jQuery', true)
+							+e.SPAN.skill
+								+checkbox-group('Знаю/изучаю Angular', false)
+							+e.SPAN.skill
+								+checkbox-group('Знаю/изучаю React', true)
+							+e.SPAN.skill
+								+checkbox-group('Знаю/изучаю Node.js', true)
+						+skills
+							+e.SPAN.skill
+								+checkbox-group('Использую Git', true)
+							+e.SPAN.skill
+								+checkbox-group('С глазомером вссе ок', true)
+							+e.SPAN.skill
+								+checkbox-group
+									+e.INPUT.input(type='checkbox' checked)
+									+e.SPAN.label
+										| Читаю
+										a(href='#' target='_blank') blog csssr.ru
+							+e.SPAN.skill
+								+checkbox-group('Я ленивый(-ая)', true)
+							+e.SPAN.skill
+								+checkbox-group('У меня хороший английский', false)
