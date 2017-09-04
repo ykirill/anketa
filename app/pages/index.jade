@@ -4,6 +4,9 @@ include /blocks/page/page
 
 include /blocks/header/header
 include /blocks/main/main
+include /blocks/main/section/section
+
+include /blocks/input-group/input-group
 
 block head
 	- var pageTitle = 'Kirill Yakushev - CSSSR';
@@ -12,3 +15,10 @@ block content
 	+page
 		+header
 		+main
+			form
+				+section.foo
+					+input-group('Полное ФИО', 'text', 'Якушев Кирилл Николаевич')
+					+input-group('Год рождения', 'number', '1991')
+					+input-group('Место жительства', 'text', 'Октябрьский, РБ')
+					+input-group('Скайп', 'text', 'yakushev.k')
+					+input-group('Почта', 'email', 'k.n.yakushev@gmail.com')

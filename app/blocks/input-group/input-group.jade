@@ -1,0 +1,4 @@
+mixin input-group(label, type, value)
+	+b.LABEL.input-group&attributes(attributes)
+		+e.SPAN.label._default=label
+		+e.INPUT.input._default(type=type value=value)
