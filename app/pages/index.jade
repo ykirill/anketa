@@ -5,6 +5,9 @@ include /blocks/page/page
 include /blocks/header/header
 include /blocks/main/main
 include /blocks/main/section/section
+include /blocks/main/title/title
+include /blocks/main/description/description
+include /blocks/main/content/content
 
 include /blocks/input-group/input-group
 
@@ -16,9 +19,18 @@ block content
 		+header
 		+main
 			form
-				+section.foo
-					+input-group('Полное ФИО', 'text', 'Якушев Кирилл Николаевич')
-					+input-group('Год рождения', 'number', '1991')
-					+input-group('Место жительства', 'text', 'Октябрьский, РБ')
-					+input-group('Скайп', 'text', 'yakushev.k')
-					+input-group('Почта', 'email', 'k.n.yakushev@gmail.com')
+				+section._personal-data
+					+content
+						+input-group('Полное ФИО', 'text', 'Якушев Кирилл Николаевич')
+						+input-group('Год рождения', 'number', '1991')
+						+input-group('Место жительства', 'text', 'Октябрьский, РБ')
+						+input-group('Скайп', 'text', 'yakushev.k')
+						+input-group('Почта', 'email', 'k.n.yakushev@gmail.com')
+
+				+section._skills
+					+title
+						| Расскажите о себе чекбоксами
+					+description
+						| Отметьте чекбоксами пункты, которые соответствуют вашим скиллам. Кстати, отсутствие опыта не означает, что у вас меньше шансов стать одним из наших товарищей. Это означает, что вы будете получать те задачи, с которыми гарантировано будете справляться.
+					+content
+
