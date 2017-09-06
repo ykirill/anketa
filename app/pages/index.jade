@@ -9,9 +9,11 @@ include /blocks/main/title/title
 include /blocks/main/description/description
 include /blocks/main/content/content
 include /blocks/skills/skills
+include /blocks/plan/plan
 
 include /blocks/input-group/input-group
 include /blocks/checkbox-group/checkbox-group
+include /blocks/radio-group/radio-group
 
 block head
 	- var pageTitle = 'Kirill Yakushev - CSSSR';
@@ -69,7 +71,7 @@ block content
 							+e.SPAN.skill
 								+checkbox-group('Использую Git', true)
 							+e.SPAN.skill
-								+checkbox-group('С глазомером вссе ок', true)
+								+checkbox-group('С глазомером все ок', true)
 							+e.SPAN.skill
 								+checkbox-group
 									+e.INPUT.input(type='checkbox' checked)
@@ -80,3 +82,33 @@ block content
 								+checkbox-group('Я ленивый(-ая)', true)
 							+e.SPAN.skill
 								+checkbox-group('У меня хороший английский', false)
+
+				+section._js-level
+					+title
+						| Уровень владения JavaScript
+
+				+section._about
+					+title
+						| Расскажите о себе словами
+					+description
+						| Напишите пару предложений, чем вас привлекла наша вакансия и чего вы ожидаете от работы в CSSSR. Кстати, будет здорово, если при нехватке места для текста строки будут добавляться автоматически.
+
+				+section._plans
+					+title
+						| Какие у вас планы на будущее?
+					+description
+						| Этот ответ ни на что не повлияет. Не беда, если в будущем ваши планы поменяются.
+					+content
+						+plan
+							+e.SPAN.item
+								+radio-group('Верстать', 'plans')
+							+e.SPAN.item
+								+radio-group('Прокачиваться в JS', 'plans', true)
+							+e.SPAN.item
+								+radio-group('Менеджерство', 'plans')
+							+e.SPAN.item
+								+radio-group('Другое', 'plans')
+
+				+section._date
+					+content
+						+input-group('Дата заполнения', 'text', '06.09.2017')._short
