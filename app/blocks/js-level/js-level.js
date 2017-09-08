@@ -11,20 +11,18 @@ const values = [
 const slider = document.querySelector('.js-level__js-slider');
 const input = document.querySelector('.js-level__input');
 const options = {
-	animate: true,
-	animationDuration: 300,
 	start: 3,
 	snap: true,
 	orientation: windowWidth < 800 ? 'vertical' : 'horizontal',
 	range: {
-		min: 1,
-		'18.6%': 2,
-		'49.4%': 3,
-		max: 4
+		min: 0,
+		'18.6%': 1,
+		'49.4%': 2,
+		max: 3
 	},
 	pips: {
 		mode: 'steps',
-		density: 100
+		density: 500
 	}
 };
 
@@ -43,6 +41,11 @@ const changePimps = (sliderNode, vals) => {
 
 	return valNodes.map((node, index) => {
 		node.innerHTML = vals[index];
+		node.addEventListener('click', () => {
+			slider.noUiSlider.set(index);
+			input.value = index;
+			console.log(index);
+		});
 	});
 };
 
