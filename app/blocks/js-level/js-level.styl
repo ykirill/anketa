@@ -1,0 +1,49 @@
+.js-level
+	display block
+
+	&__js-slider
+		position relative
+		margin-top 40px
+		padding-bottom 100px
+		display block
+		height 5px
+
+		background-image url('../images/line.png')
+		background-repeat no-repeat
+		background-position-y -27px
+		background-size contain
+
+		& .noUi-marker
+			position absolute
+			top 1px
+			width 3px
+			height 11px
+
+			background-color $font-color-primary
+
+			&.firstPipNode, &.lastPipNode
+				height 26px
+
+		& .noUi-value
+			position absolute
+			margin-top 30px
+			max-width 200px
+
+			font-size 13px
+			font-weight 700
+			line-height 1.5
+
+			&:last-child
+				transform translateX(-100%)
+				white-space nowrap
+
+		& .noUi-origin
+			position absolute
+			top -20px
+
+		& .noUi-handle
+			position relative
+			left -6px
+			background-image url('../images/triangle.png')
+			background-repeat no-repeat
+			size 18px 16px

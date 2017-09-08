@@ -14,9 +14,10 @@ include /blocks/plan/plan
 include /blocks/input-group/input-group
 include /blocks/checkbox-group/checkbox-group
 include /blocks/radio-group/radio-group
+include /blocks/js-level/js-level
 
 block head
-	- var pageTitle = 'Kirill Yakushev - CSSSR';
+	- var pageTitle = 'Kirill Yakushev';
 
 block content
 	+page
@@ -86,6 +87,7 @@ block content
 				+section._js-level
 					+title
 						| Уровень владения JavaScript
+					+js-level(2)
 
 				+section._about
 					+title
