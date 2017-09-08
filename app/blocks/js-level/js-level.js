@@ -44,7 +44,6 @@ const changePimps = (sliderNode, vals) => {
 		node.addEventListener('click', () => {
 			slider.noUiSlider.set(index);
 			input.value = index;
-			console.log(index);
 		});
 	});
 };
