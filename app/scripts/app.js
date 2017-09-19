@@ -8,10 +8,9 @@
 
 
 import slider from '../blocks/js-level/js-level';
+import textArea from '../blocks/text-area/text-area';
 
 window.addEventListener('load', () => {
 	slider();
-});
-window.addEventListener('resize', () => {
-	slider();
+	textArea();
 });
