@@ -2,13 +2,9 @@
 	display block
 
 	&__section
-		&_personal-data
-			margin-bottom 60px
-
+		&_personal-data,
+		&_about,
 		&_plans
-			margin-bottom 60px
-
-		&_about
 			margin-bottom 60px
 
 		&_skills
@@ -40,3 +36,13 @@
 		font-size 15px
 		font-weight 400
 		color $font-color-tertiary
+
+@media (max-device-width: 768px)
+	.main
+
+		&__section
+			&_personal-data,
+			&_about,
+			&_skills,
+			&_plans
+				margin-bottom 30px
