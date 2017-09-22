@@ -57,3 +57,51 @@
 			background-image url('../images/triangle.png')
 			background-repeat no-repeat
 			size 18px 16px
+
+@media (max-device-width: 768px)
+	.js-level
+		margin-bottom 40px
+		padding-left 15px
+
+		&__js-slider
+			margin-top 15px
+			padding-left 15px
+			padding-bottom 0
+			height 200px
+
+			background-image url('../images/line-vertical.png')
+			background-position-x -12px
+			background-position-y 0
+			background-size 10%
+
+			& .noUi-marker
+				left 1px
+				width 26px
+				height 3px
+
+				background-image url('../images/common-pip-mobile.png')
+				background-position 0 -8px
+
+				&.firstPipNode
+					background-image url('../images/first-pip-mobile.png')
+
+				&.lastPipNode
+					background-image url('../images/last-pip-mobile.png')
+					background-position 0 -12px
+
+			& .noUi-value
+				left 40px
+				margin-top 0
+				max-width auto
+				transform translateY(-50%)
+
+				&:last-child
+					transform translateY(-50%)
+
+			& .noUi-origin
+				position absolute
+				left -15px
+				transform translateY(-50%)
+
+			& .noUi-handle
+				transform rotate(-90deg)

@@ -13,8 +13,13 @@ const input = document.querySelector('.js-level__input');
 const options = {
 	start: 3,
 	snap: true,
-	orientation: windowWidth < 800 ? 'vertical' : 'horizontal',
-	range: {
+	orientation: windowWidth < 768 ? 'vertical' : 'horizontal',
+	range: windowWidth < 768 ? {
+		min: 0,
+		'33.3%': 1,
+		'66.7%%': 2,
+		max: 3
+	} : {
 		min: 0,
 		'18.6%': 1,
 		'49.4%': 2,
